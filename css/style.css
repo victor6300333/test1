@@ -1,0 +1,184 @@
+@charset "UTF-8";
+
+img {
+    display: block;
+    width: 100%;
+}
+
+/* boostrap 換圖輪播 */
+#carouselExampleCaptions .carousel-item {
+    height: calc(100vh - 70px);
+}
+/* boostrap 換圖輪播 */
+#carouselExampleCaptions img {
+    object-fit: cover;
+    height: 100%;
+}
+
+/* bootstrap導覽列 */
+.navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 70px;
+    z-index: 999;
+}
+
+/* 主要內容區 */
+.title {
+    position: relative;
+    margin: 2rem 0 1rem;
+    padding-left: 16px;
+    border-left: 3px solid #222;
+}
+
+.title span {
+    font-size: 1rem;
+    padding-left: .6rem;
+}
+
+.title::after {
+    content: ""; /* 必須設定。就算沒有值也要保留空值位置。 */
+    position: absolute; /* 有支援寬高設定, 未設置寬高會自動抓 */
+    left: 12.5rem;
+    bottom: 5px;
+    width: calc(100% - 12.5rem);
+    height: 3px;
+    background-color: #222;
+
+}
+
+#accessories .title::after {
+    left: 16rem;
+    width: calc(100% - 16rem);
+}
+
+
+.mask {
+    position: relative;
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+}
+
+.blobs-1 {
+    mask-image: url(../images/blobs-1.svg);
+}
+
+.blobs-2 {
+    mask-image: url(../images/blobs-2.svg);
+}
+
+.blobs-3 {
+    mask-image: url(../images/blobs-3.svg);
+}
+
+.mask h2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.6);
+    color: aliceblue;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: .4s;
+}
+
+.mask h2:hover {
+    opacity: 1;
+}
+
+#accessories .row {
+    padding: 2vh 15%;
+}
+
+/* 商品內容區 */
+#accessories #tabs > div {
+    display: flex;
+}
+
+#accessories .col {
+    margin: 15px;
+}
+
+#accessories h1 {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    box-shadow: 5px 5px red;
+}
+
+#accessories data {
+    display: block;
+    margin: 1rem 0 0.5rem;
+}
+
+#accessories .price {
+    font-weight: 600;
+    margin: 1rem 0 1rem;
+}
+
+#accessories mark {
+    background-color: green;
+    font-size: 1.5rem;
+}
+
+#accessories .ui-tabs {
+    padding-bottom: 10px;
+}
+
+#accessories .ui-tabs .ui-tabs-nav {
+    display: flex;
+}
+
+#accessories .ui-widget-header {
+    border: none;
+    background: transparent;
+}
+
+#accessories .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+    padding: 0;
+}
+
+#accessories .ui-tabs .ui-tabs-nav li {
+    border-bottom-width: 1px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 1px 10px 0 0;
+}
+
+#accessories .ui-tabs .ui-tabs-nav li:last-child {
+    margin-right: 0;
+}
+
+#accessories .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+    border: 1px solid #222;
+    background: transparent;
+}
+
+#accessories .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+    background: transparent;
+}
+
+/* #tabs-1, #tabs-2, #tabs-3, #tabs-4, #tabs-5 {
+    height: 40vh;
+}  */
+
+/* 所有商品 */
+/* #all .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+#all .content h3 {
+    margin: 1rem 0 .5rem;
+    font-size: 1.4rem;
+}
+
+#all .content p {
+    color: rgb(255, 0, 34);
+}
